@@ -8,15 +8,14 @@
 
 import random
 
-# myList = [random.randint(-50, 50) for i in range(int(input('n = ')))]
+# myList = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+myList = [random.randint(-50, 50) for i in range(int(input('n = ')))]
 min = int(input('Vvedite minimum chislo: '))
 max = int(input('VVedite maximum chislo: '))
-myList = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+
 indexes = list()
 
 for i in range(len(myList)):
-    print(i)
-    print(myList[i])
     if min <= myList[i] <= max:
         indexes.append(i)
 
