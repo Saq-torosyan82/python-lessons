@@ -5,9 +5,8 @@ def v1(dataNum):
         data = file.readlines()
         start = (dataNum - 1) * 5
         end = start + 4
-        dataToDelete = data[start : end]
 
-        if len(dataToDelete) == 0:
+        if len(data[start : end]) == 0:
             print('Нет такой записи')
         else:
             if dataNum == 1:

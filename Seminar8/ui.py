@@ -1,4 +1,4 @@
-from actions import input_data, print_data, delete_data
+from actions import input_data, print_data, delete_data, update_data
 
 def interface():
     print('Добрый день! Это бот-помощник.\n'
@@ -20,6 +20,6 @@ def interface():
             print_data()
         case 3:
             delete_data()
-        # case 4:
-        #     edit_data()
+        case 4:
+            update_data()
         

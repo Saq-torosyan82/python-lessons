@@ -18,7 +18,7 @@ def input_data():
         case 2:
             from writer import v2 as writeFile
         case _:
-            print('Нет такого файла')
+            return print('Нет такого файла')
     
     writeFile(name, surname, phone, adress)
 
@@ -33,13 +33,12 @@ def print_data():
         case 2:
             from reader import v2 as readFile
         case _:
-            print('Нет такого файла')
+            return print('Нет такого файла')
 
     readFile()
         
 
 def delete_data():
-
     variant = int(input(f'\nИз какого файла удалить данные ? '))
 
     match variant:
@@ -48,10 +47,25 @@ def delete_data():
         case 2:
             from data_delete import v2 as deleteData
         case _:
-            print('Нет такого файла')
+            return print('Нет такого файла')
 
     dataNum = int(input(f'\nКакую запись удалить ? '))
 
     deleteData(dataNum)
+
+def update_data():
+    variant = int(input(f'\nВ каком файле изменить данные ? '))
+
+    match variant:
+        case 1:
+            from update_data import v1 as updateData
+        case 2:
+            from update_data import v2 as updateData
+        case _:
+            return print('Нет такого файла')
+
+    dataNum = int(input(f'\nКакую запись изменить ? '))
+
+    updateData(dataNum)
     
     
